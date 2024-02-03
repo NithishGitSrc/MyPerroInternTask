@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    min-width: 100%;
+    height: 100vh;
+}
+
+nav{
+    padding: 2px 5%;
+    border-bottom: 1px solid rgb(225, 216, 216);
+    box-shadow: 2px 2px 4px rgb(228, 228, 228);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+#logoContainer{
+  display: grid;  
+  grid-template-columns: auto auto;
+  column-gap: 5px;
+}
+#pageLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    flex-wrap: wrap;
+}   
+.pageLink{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 7px;
+    border-radius: 4px;
+    transition: 0.4s;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    text-align: center; 
+    letter-spacing: 1.2px;   
+}
+.pageLink:hover{
+    background-color: black;
+    color: rgb(16, 149, 222);
+    transform: scale(1.05);
+}
+
+.active{
+    color: rgb(16, 149, 222);
+    transform: scale(1.05);
+    font-weight: bold;
+
+}
+
+#banner{
+    background : black;
+    color: white;
+    display: grid;    
+    padding-left: 5%;
+    grid-template-columns: 40% auto;
+    
+}
+
+.content{
+    margin: 50px 0;
+    margin-right: 15%;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.5px;
+}
+.content p{
+    text-align :left;
+    margin-top: 10px;
+    line-height: 23px;
+    
+}
+.images{
+    background-image: url('Resources/banner2.jpeg');
+    background-size: cover; /* Adjust as needed */
+    background-position: 40% 40%;
+    background-repeat: no-repeat;
+    
+}
+/* Tablet View */
+@media screen and (max-width: 700px) {
+
+    #banner{
+        background : black;
+        color: white;
+        display: block;    
+        padding: 3% 5%;
+        position: relative;                       
+    }
+
+    .content{
+        margin: 0 0;
+        margin-right: 0;
+        line-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 1.5px;
+    }    
+    .images{
+        margin-top: 10px;
+        border-radius: 3px;
+        width: 100%;
+        height: 300px;
+    }
+
+  }
+
+
+  #comingSoon{
+    display: grid;
+    margin: 20px 5%;
+    grid-template-columns: 5% auto 5%;
+    column-gap: 10px;
+    overflow: hidden;
+  }
+  #comingSoon>div{
+    border: 0px solid;
+  }
+
+  #card-wapper{
+    display: flex;
+    align-items: center;
+    
+    justify-items: start;
+    overflow: hidden;
+  }
+
+  .card{
+    width: 30%;    
+    min-width: 300px;
+    min-height: 200px;
+    border: 1px solid green;
+    display: grid;
+    grid-template-columns: 45% auto;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: rgb(250, 219, 18);
+    overflow: hidden;
+    border-radius: 7px;
+    margin : 0 15px 0 0;
+  }
+  
+  .card h1{
+    margin-bottom: 5px;
+  }
+  .card p{
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+.card button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.card .poster{
+    background-image: url('Resources/dog-walking.jpg');
+    background-size: cover; 
+    background-position: 40% 40%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgb(95, 95, 95);        
+}
+#leftArrow, #rightArrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s; cursor: pointer;
+}   
+
+#leftArrow:hover, #rightArrow:hover{
+transform: scale(1.10);
+}
+#leftArrow img, #rightArrow img{
+    height: 60px;
+}
+#rightArrow img{
+    transform: rotate(180deg);
+}
