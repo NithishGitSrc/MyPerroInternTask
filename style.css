@@ -117,10 +117,12 @@ nav{
 
   #comingSoon{
     display: grid;
-    margin: 20px 5%;
+    padding: 20px 5%;
     grid-template-columns: 5% auto 5%;
     column-gap: 10px;
     overflow: hidden;
+    box-shadow: 0px 2px 3px gray, 2px 0px 3px white;
+    
   }
   #comingSoon>div{
     border: 0px solid;
@@ -135,6 +137,7 @@ nav{
   }
 
   .card{
+    position: relative;
     width: 30%;    
     min-width: 300px;
     min-height: 200px;
@@ -147,6 +150,16 @@ nav{
     overflow: hidden;
     border-radius: 7px;
     margin : 0 15px 0 0;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .card:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .card:hover > .description div button{
+    background-color: rgb(1, 204, 38);
   }
   
   .card h1{
@@ -156,6 +169,7 @@ nav{
     text-align: left;
     font-size: 13px;
     margin-bottom: 10px;
+    
   }
 .card button{
     border: none;
@@ -163,7 +177,15 @@ nav{
     color: white;
     padding: 10px 15px;
     border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
 }
+.card button:hover{
+ transform: scale(1.10);
+ background-color: rgb(1, 204, 38);
+ font-weight: bold;
+}
+
 .card .poster{
     background-image: url('Resources/dog-walking.jpg');
     background-size: cover; 
@@ -188,3 +210,74 @@ transform: scale(1.10);
 #rightArrow img{
     transform: rotate(180deg);
 }
+
+.dog-taining{
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+    
+    position: relative;
+    background-image: url('Resources/dog-training.jpg');
+    background-size :70% auto;
+    background-position: 100% 30%;
+    background-repeat: no-repeat;
+
+}
+.adv{
+    position: absolute;
+    box-sizing: border-box;
+    width: 60%;
+    border: 1px solid rgb(233, 233, 233) ;
+    height: 100%;    
+    padding: 15px 15% 15px 5%;
+    clip-path: polygon(0 0, 100% 0%, 61% 100%, 0% 100%);
+    background-color: rgb(182,74,71);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adv h1{color: rgb(255,249,201); margin-bottom: 7px;}
+.adv p{letter-spacing: 1.3px;}
+.adv h3{margin-top: 20px; padding: 10px 20px; color: black; background-color: white; display: inline-block;}
+
+
+#about-us{
+    display: grid;
+    grid-template-columns: 30% auto;
+    letter-spacing: 1.4px;    
+}
+#about-us  > div:first-child{
+    background: rgb(89, 89, 89);
+    padding: 30px 0 30px 15%;
+    font-size: xx-large;
+    color: wheat;
+}
+#about-us  > div button{
+    border: none;
+    background: black;
+    color: white;
+    font-size:17px;
+    letter-spacing: 1.3px;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+#about-us > div:nth-child(2){
+    padding:30px 5%  ;
+    background: black;
+    color: white;
+}
+#about-us h2{padding-left: 10px; border-left: 5px solid white; border-radius: 5px;}
+#about-us h4{margin: 10px 0;  font-weight: lighter;}
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 5%;
+    line-height: 24px;
+
+}
+#footer ul{list-style: none;}
